@@ -16,6 +16,9 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "i18n-js"
 gem "rubocop", require: false
+gem "bcrypt", "~> 3.1.7"
+gem "faker", "1.7.3"
+gem "config"
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
