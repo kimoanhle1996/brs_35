@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  title: MyString
+  date: 2017-08-28
+  message: MyString
+  status: false
+
+two:
+  user_id: 1
+  title: MyString
+  date: 2017-08-28
+  message: MyString
+  status: false
