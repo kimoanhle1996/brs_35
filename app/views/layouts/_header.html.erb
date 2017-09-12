@@ -1,0 +1,66 @@
+<div class=" header-product">
+      <div class="header-top com">
+        <div class="container">
+          <div class="header-top-in grid-1">
+            <ul class=" support-right">
+            <% if !logged_in? %>
+              <li><%= link_to t("login"), login_path, class: "tele" %></li>
+              <li><%= link_to t("account"), new_user_path, class: "tele" %></li>
+            <% else %>
+              <li><%= link_to t("logout"), logout_path, class: "tele", method: :delete %></li>
+            <% end %>
+
+            </ul>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div class="header-bottom bottom-com">
+          <div class="container">
+            <div class="logo">
+              <h1><a href="index.html"><%= t "rivew" %></a>
+              </h1>
+            </div>
+            <div class="top-nav">
+              <!-- start header menu -->
+              <ul class="megamenu skyblue menu-in">
+                <li><%= link_to t("home"), root_path %></li>
+
+
+                </li>
+                <li class="active grid">
+                  <a  href="#"><%= t "book" %></a>
+                </li>
+                <li ><a  href="404.html">Review</a></li>
+                <li>
+                  <a  href="#">Products</a>
+
+                </li>
+                <li><%= link_to t("contact"), contacts_new_path %></li>
+                </li>
+              </ul>
+              <!---->
+              <div class="search-in" >
+
+                <div class="right"><button> </button></div>
+              </div>
+              <!---->
+              <!-- <div class="cart box_1">
+                <a href="checkout.html">
+                  <h3>
+                    <div class="total">
+                      <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)
+                    </div>
+
+
+                  </h3>
+                </a>
+                <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                <div class="clearfix"> </div>
+              </div> -->
+              <!---->
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+      </div>
+    </div>

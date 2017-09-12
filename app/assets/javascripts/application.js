@@ -10,9 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery.min.js
+//= require jquery.wmuSlider.js
+//= require jquery.etalage.min.js
+//= require jquery.easydropdown.js
+//= require jquery-ui.min.js
+//= require easyResponsiveTabs.js
+//= require main.js
+//= require megamenu.js
+//= require simpleCart.min.js
 //= require rails-ujs
 //= require turbolinks
 //= require i18n
+//= require search.js
 //= require i18n.js
 //= require i18n/translations
 //= require_tree .
+
