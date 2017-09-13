@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170830135236) do
+=======
+ActiveRecord::Schema.define(version: 20170901090517) do
+>>>>>>> b8073136d958946a5a6197542edea0bf0b388bfa
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -19,12 +23,12 @@ ActiveRecord::Schema.define(version: 20170830135236) do
     t.integer "page_number"
     t.string "preview"
     t.text "detail"
-    t.string "image"
+    t.string "picture"
     t.float "rate"
-    t.integer "catagorie_id"
+    t.integer "catagory_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["catagorie_id"], name: "index_books_on_catagorie_id"
+    t.index ["catagory_id"], name: "index_books_on_catagory_id"
   end
 
   create_table "catagories", force: :cascade do |t|
@@ -112,7 +116,7 @@ ActiveRecord::Schema.define(version: 20170830135236) do
     t.string "email"
     t.string "password_digest"
     t.string "fullname"
-    t.boolean "role"
+    t.boolean "role", default: false
     t.string "img"
     t.integer "active"
     t.datetime "created_at", null: false
@@ -121,6 +125,11 @@ ActiveRecord::Schema.define(version: 20170830135236) do
     t.boolean "activated", default: false
     t.datetime "activated_at"
     t.string "remember_digest"
+<<<<<<< HEAD
+=======
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+>>>>>>> b8073136d958946a5a6197542edea0bf0b388bfa
   end
 
 end

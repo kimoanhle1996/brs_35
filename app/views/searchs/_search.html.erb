@@ -1,0 +1,5 @@
+<h3>Tim Kiem </h3>
+<%= form_tag(searchs_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', :name => nil%>
+<% end %>

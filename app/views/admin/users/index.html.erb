@@ -1,0 +1,73 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4><%= t "user" %></h4>
+      <div class="add">
+        <%= link_to new_admin_user_path, class: "btn btn-info" do %>
+          <span class="material-icons button edit" aria-hidden="true">
+            <i class="material-icons"><%= t "add" %></i>
+          </span>
+        <% end %>
+      </div>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th><%= t "id" %></th>
+            <th><%= t "name" %></th>
+            <th><%= t "email" %></th>
+            <th><%= t "role" %></th>
+            <th><%= t "active" %></th>
+            <th><%= t "edit" %></th>
+            <th><%= t "delete" %></th>
+          </thead>
+          <tbody>
+          <% @users.each do |user|%>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= user.fullname %></td>
+              <td><%= user.email %></td>
+              <td><%= user.role %></td>
+              <td>
+
+              </td>
+              <% if current_user.role? && !current_user?(user)%>
+              <td>
+              <%= link_to edit_admin_user_path(user.id), class: "btn btn-info" do %>
+                  <span class="material-icons button edit" aria-hidden="true">
+                    <i class="material-icons">mode_edit</i>
+                  </span>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to [:admin, user], method: :delete,
+                  data: {confirm: "Are you sure?"}, class: "btn btn-danger" do %>
+                 <span> <i class="material-icons button delete">delete</i></span>
+                <% end %>
+              </td>
+              <% else %>
+              <td>
+                no
+              </td>
+              <td>
+                no
+              </td>
+              <% end %>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="clearfix"></div>
+        <ul class="pagination pull-right">
+          <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,9 +7,9 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.integer :page_number
       t.string :preview
       t.text :detail
-      t.string :image
+      t.string :picture
       t.float :rate
-      t.references :catagorie, index: true, foreign_key: true
+      t.references :catagory, index: true, foreign_key: true
 
       t.timestamps
     end
