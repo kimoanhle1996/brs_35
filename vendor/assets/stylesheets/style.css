@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
 body{
 	background:#fff;
 	font-family: 'Lato', sans-serif;
@@ -1780,6 +1781,11 @@ padding: 1em 0;
 	float: left;
 	width: 13%;
 }
+.top-comment-left img {
+	width: 120px;
+	height:130px
+}
+
 .top-comment-right{
 	float: left;
 	width:84%;

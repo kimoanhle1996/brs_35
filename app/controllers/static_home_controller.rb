@@ -1,3 +1,6 @@
 class StaticHomeController < ApplicationController
-  def index; end
+  def index
+    @catagories = Catagory.all
+    @books = Book.all
+  end
 end

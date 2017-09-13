@@ -10,7 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require bootstrap
 //= require jquery.min.js
+//= require books.js
 //= require jquery.wmuSlider.js
 //= require jquery.etalage.min.js
 //= require jquery.easydropdown.js
@@ -19,6 +22,7 @@
 //= require main.js
 //= require megamenu.js
 //= require simpleCart.min.js
+//= require users.js
 //= require rails-ujs
 //= require turbolinks
 //= require i18n

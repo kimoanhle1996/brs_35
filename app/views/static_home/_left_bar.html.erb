@@ -1,0 +1,20 @@
+
+ <div class="col-md-3 product-price">
+    <div>
+    <%= render "searchs/search" %>
+
+    </div>
+    <div class=" rsidebar span_1_of_left">
+      <div class="of-left">
+        <h3 class="cate">CATEGORIES</h3>
+      </div>
+      <ul class="menu">
+       <% @catagories.each do |f| %>
+        <li class="item1">
+           <%= link_to f.name, catagory_path(f.id) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
