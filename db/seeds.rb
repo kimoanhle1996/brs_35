@@ -15,5 +15,6 @@ User.create!(fullname:  "Example User",
                password_confirmation: password,
                role: true,
                active: true)
+
 end
 
