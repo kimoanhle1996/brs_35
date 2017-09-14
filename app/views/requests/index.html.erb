@@ -1,3 +1,14 @@
-<% @contacts.each do |contact| %>
-  <%= contact.title %>
-<% end %>
+<div class="row">
+    <aside class="col-md-5">
+      <section class="user_info">
+        <%= render "user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "contact_form" %>
+      </section>
+    </aside>
+     <div class="col-md-5">
+      <h3>Contact</h3>
+      <%= render "contact" %>
+    </div>
+  </div>

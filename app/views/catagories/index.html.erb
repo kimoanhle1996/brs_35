@@ -6,7 +6,7 @@
         <h3 class="cate">CATEGORIES</h3>
       </div>
       <ul class="menu">
-       <% @catagory.each do |f| %>
+       <% @catagories.each do |f| %>
         <li class="item1">
            <%= link_to f.name, catagory_path(f.id) %>
         </li>

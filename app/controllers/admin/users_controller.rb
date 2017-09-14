@@ -1,9 +1,9 @@
 class Admin::UsersController < ApplicationController
   layout "admin_application"
   before_action :load_user, only: %i(edit update destroy)
-  before_action :admin_user, only: %i(destroy)
+  before_action :admin_user
   before_action :user_correct, only: %i(edit update)
-  before_action :logged_in_user, except: %i(new show create)
+  before_action :logged_in_user, except: %i(new)
   def new
     @user = User.new
   end
@@ -41,7 +41,7 @@ class Admin::UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
-    redirect_to loggin_path
+    redirect_to login_path
   end
 
   def user_params

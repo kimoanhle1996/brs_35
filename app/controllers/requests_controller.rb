@@ -16,7 +16,13 @@ class RequestsController < ApplicationController
   end
 
   def index
+    @contact = Request.new
     @contacts = Request.request_user current_user.id
+  end
+
+  def destroy
+    @contact.destroy
+
   end
 
   private

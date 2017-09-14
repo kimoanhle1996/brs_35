@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 
 
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -5787,3 +5788,7 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.gravatar {
+ width:120px;
+ height:100px;
+ }

@@ -4,13 +4,13 @@ class CatagoriesController < ApplicationController
   end
 
   def index
-    @catagory = Catagory.all
+    @catagories = Catagory.all
   end
 
   def show
-    @catagory = Catagory.all
-    @catagory1 = Catagory.find_by id: params[:id]
-    @books = @catagory1.books
+    @catagories = Catagory.all
+    @catagory = Catagory.find_by id: params[:id]
+    @books = @catagory.books
   end
 
   def create

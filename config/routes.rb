@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   resources :requests
   resources :ratings
   namespace :admin do
+    root "users#index"
     resources :users
+    resources :catagories
+    resources :books
   end
 end
