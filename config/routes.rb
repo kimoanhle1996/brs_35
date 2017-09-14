@@ -19,7 +19,12 @@ Rails.application.routes.draw do
   resources :comments
   resources :requests
   resources :ratings
+  resources :reviews
+
   namespace :admin do
+    root "users#index"
     resources :users
+    resources :catagories
+    resources :books
   end
 end

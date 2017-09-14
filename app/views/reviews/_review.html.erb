@@ -1,0 +1,22 @@
+
+<div class="comment-wrap">
+  <% @reviews.each do |review| %>
+    <div class="photo">
+      <%= render "shared/info_user"%>
+    </div>
+    <div class="comment-block">
+      <h6><%= current_user.fullname %></h6>
+      <p class="comment-text"><%= review.detail %></p>
+      <div class="bottom-comment">
+        <div class="comment-date"> Posted <%= time_ago_in_words(review.created_at) %> ago.</div>
+      </div>
+      <div class="div-create">
+         <%= render "comments/comment" %>
+      </div>
+      <div class="ajax-form-create">
+       <%= render "comments/form_comment" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

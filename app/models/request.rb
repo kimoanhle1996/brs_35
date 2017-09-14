@@ -1,4 +1,5 @@
 class Request < ApplicationRecord
   belongs_to :user
-  scope :request_user, ->(id){where user_id: id}
+  default_scope -> { order(created_at: :desc) }
+  scope :request_user, ->(id){where user_id: id }
 end

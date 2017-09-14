@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def admin_user
     return if current_user.role?
     flash[:danger] = t "not"
-    redirect_to admin_users_path
+    redirect_to root_url
   end
 
   def user_correct
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   def logged_in_user
     return if logged_in?
-    store_location
+     session[:forwarding_url] = request.original_url if request.get?
     flash[:danger] = I18n.t "please"
     redirect_to login_url
   end

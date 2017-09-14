@@ -1,7 +1,7 @@
-User.create!(fullname:  "Example User",
-             email: "example@railstutorial.org",
-             password: "foobar",
-             password_confirmation: "foobar",
+User.create!(fullname:  "kimoanh",
+             email: "kimoanhle1996@gmail.com",
+             password: "123456",
+             password_confirmation: "123456",
              role: true,
              active: true,
              activated: true,
@@ -15,9 +15,27 @@ User.create!(fullname:  "Example User",
                email: email,
                password: password,
                password_confirmation: password,
-               role: true,
+               role: false,
                active: true,
                activated: true,
                activated_at: Time.zone.now)
 end
 
+Catagory.create!(
+    name: "C++"
+  )
+Catagory.create!(
+    name: "Android"
+  )
+Catagory.create!(
+    name: "PHP"
+  )
+Catagory.create!(
+    name: "Java"
+  )
+Catagory.create!(
+    name: "Ruby on Rails"
+  )
+Catagory.create!(
+    name: "IOS"
+  )

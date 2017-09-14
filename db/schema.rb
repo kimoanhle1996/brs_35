@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170830135236) do
-=======
 ActiveRecord::Schema.define(version: 20170901090517) do
->>>>>>> b8073136d958946a5a6197542edea0bf0b388bfa
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -39,13 +35,12 @@ ActiveRecord::Schema.define(version: 20170901090517) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
-    t.string "commentable_type"
-    t.integer "commentable_id"
+    t.integer "review_id"
     t.text "detail"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+    t.index ["review_id"], name: "index_comments_on_review_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -125,11 +120,8 @@ ActiveRecord::Schema.define(version: 20170901090517) do
     t.boolean "activated", default: false
     t.datetime "activated_at"
     t.string "remember_digest"
-<<<<<<< HEAD
-=======
     t.string "reset_digest"
     t.datetime "reset_sent_at"
->>>>>>> b8073136d958946a5a6197542edea0bf0b388bfa
   end
 
 end

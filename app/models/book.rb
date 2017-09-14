@@ -4,13 +4,14 @@ class Book < ApplicationRecord
   has_many :reviews
   mount_uploader :picture, PictureUploader
   validate :picture_size
+  scope :search, ->(term){ where "title LIKE ? or author LIKE ?", "%#{term}%", "%#{term}%" }
 
-  def self.search term
-    if term
-      search = "%#{term}%"
-      where("title LIKE ? or author LIKE ?", search, search)
-    end
-  end
+  # def self.search term
+  #   if term
+  #     search = "%#{term}%"
+  #     where("title LIKE ? or author LIKE ?", search, search)
+  #   end
+  # end
 
   private
 
@@ -20,3 +21,4 @@ class Book < ApplicationRecord
     end
   end
 end
+

@@ -1,21 +1,35 @@
 class CommentsController < ApplicationController
-#    def create
-#       @comment = current_user.comments.build comment_params
-#       @comment.review_rate_id = @review.id
-#       if @comment.save
-#         respond_to do |format|
-#           format.html {redirect_to book_review_rate_path @review.book, @review}
-#           format.js
-#         end
-#       else
-#         render :new
-#       end
-#    end
 
-#    private
+  def new
+    @comment = Comment.new
+  end
 
-#    def comment_params
+  # def create
+  #   @comment = Comment.create(params_comment)
+  #   if @comment.save
+  #     respond_to do |format|
+  #       format.js
+  #     end
+  #   else
+  #     render root_path
+  #   end
+  #  end
 
-#    end
 
+  def create
+    @comment = Comment.create(params_comment)
+    if @comment.save
+      #flash[:info] = t "thank"
+      redirect_to requests_path
+    else
+      flash[:danger] = "no"
+    end
+
+  end
+
+  private
+
+  def params_comment
+    params.require(:comment).permit(:detail, :review_id, :user_id)
+  end
 end

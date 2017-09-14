@@ -1,0 +1,15 @@
+<h4><%=  current_user.fullname  %></h4>
+<% @contacts.each do |contact| %>
+<div id="micropost-<%= contact.id %>">
+  <span class="content">
+  <p> <%= contact.title %></p>
+  <p> <%= contact.message %></p>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(contact.created_at) %> ago.
+    <% if current_user?(contact.user) %>
+      <%= link_to "delete", contact, method: :delete,
+       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</div>
+<% end %>

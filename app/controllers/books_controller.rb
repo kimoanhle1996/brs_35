@@ -1,14 +1,15 @@
 class BooksController < ApplicationController
   def new
     @book = Book.new
+
   end
 
   def index
-    @book = Book.all
+    @books = Book.all
   end
 
   def show
-    @catagory = Catagory.all
+    @review = Review.new
     @book = Book.find_by id: params[:id]
   end
 

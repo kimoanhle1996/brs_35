@@ -1,0 +1,8 @@
+
+  $('.ajax-form-create').html('<%= j render "comments/form_comment",
+      review: @review, comment: @comment,
+      button_name: ("Send") %>');
+
+  $('.div-create').html('<%= j render "comments/comment",
+      comments: @review.comments.desc %>').appendTo('.div-create')
+
